@@ -1001,6 +1001,13 @@ input[type="checkbox"]:checked ~ ul {
 
 .indexPage .galleryContainer img {
   width: calc((100% / 3) - 20px);
+  -webkit-transition: all 0.8s;
+  transition: all 0.8s;
+}
+
+.indexPage .galleryContainer img:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 
 .indexPage .fontIcon {
@@ -1075,9 +1082,12 @@ input[type="checkbox"]:checked ~ ul {
     padding: 200px 0;
     height: auto;
   }
+  .indexPage .sectionFour p {
+    text-align: left;
+  }
 }
 
-@media (max-width: 850px) and (max-width: 650px) {
+@media (max-width: 650px) {
   .indexPage .sectionOne {
     padding: 50px 0;
     height: auto;
@@ -1166,9 +1176,6 @@ input[type="checkbox"]:checked ~ ul {
     padding-top: 60px;
     width: 100%;
   }
-}
-
-@media (max-width: 850px) {
   .indexPage .sectionFour p {
     text-align: center;
   }

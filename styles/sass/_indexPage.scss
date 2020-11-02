@@ -1,8 +1,6 @@
 // INDEX PAGE/ HOME PAGE STYLES
 
-
 .indexPage {
-  
   header {
     img {
       width: 52vw;
@@ -131,7 +129,6 @@
 
   .sectionThree {
     background-color: $pale-mauve;
-
   }
 
   .sectionThreeFlexContainer {
@@ -167,7 +164,6 @@
     display: flex;
     justify-content: space-between;
     padding: 100px 0;
-
   }
   .popularGrid img {
     object-fit: cover;
@@ -195,6 +191,12 @@
 
   .galleryContainer img {
     width: calc((100% / 3) - 20px);
+    // transform: rotateY(60deg);
+    transition: all 0.8s;
+  }
+
+  .galleryContainer img:hover {
+    transform: rotateY(180deg);
   }
 
   .fontIcon {
@@ -212,9 +214,7 @@
     text-align: center;
   }
 
-
-
-//   START OF MEDIA QUERIES 
+  //   START OF MEDIA QUERIES
 
   @media (max-width: 1300px) {
     .sectionThreeFlexContainer {
@@ -272,91 +272,93 @@
       padding: 200px 0;
       height: auto;
     }
-  
-    @media (max-width: 650px) {
-      .sectionOne {
-        padding: 50px 0;
-        height: auto;
-      }
+    .sectionFour p {
+      text-align: left;
+    }
+  }
 
-      .galleryContainer img:nth-child(3n) {
-        display: none;
-      }
-      .galleryContainer img {
-        width: calc(50% - 10px);
-      }
+  @media (max-width: 650px) {
+    .sectionOne {
+      padding: 50px 0;
+      height: auto;
+    }
 
-      .sideHeaderImage {
-        visibility: hidden;
-      }
+    .galleryContainer img:nth-child(3n) {
+      display: none;
+    }
+    .galleryContainer img {
+      width: calc(50% - 10px);
+    }
 
-      h6 {
-        text-align: center;
-      }
+    .sideHeaderImage {
+      visibility: hidden;
+    }
 
-      .rowOne,
-      .rowTwo {
-        flex-wrap: wrap;
-        justify-content: center;
+    h6 {
+      text-align: center;
+    }
+
+    .rowOne,
+    .rowTwo {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      div {
+        width: 80%;
+        padding: 55px 0;
         align-items: center;
-        div {
-          width: 80%;
-          padding: 55px 0;
-          align-items: center;
-          p {
-            text-align: center;
-          }
+        p {
+          text-align: center;
         }
       }
-      .rowTwo {
-        flex-direction: column-reverse;
-      }
-      .rowTwo img,
-      .rowOne img {
-        width: 90%;
-      }
+    }
+    .rowTwo {
+      flex-direction: column-reverse;
+    }
+    .rowTwo img,
+    .rowOne img {
+      width: 90%;
+    }
 
-      .sectionThreeFlexContainer {
-        flex-direction: column;
-        padding: 10px;
-      }
+    .sectionThreeFlexContainer {
+      flex-direction: column;
+      padding: 10px;
+    }
 
-      .container {
-        width: 90%;
-        padding: 20px 0;
-      }
-      .sectionThreeFlexContainer p {
-        padding: 0;
-        margin: 0 0 0 45px;
-      }
+    .container {
+      width: 90%;
+      padding: 20px 0;
+    }
+    .sectionThreeFlexContainer p {
+      padding: 0;
+      margin: 0 0 0 45px;
+    }
 
-      .mauveSneakerBanner {
+    .mauveSneakerBanner {
+      height: auto;
+      img {
         height: auto;
-        img {
-          height: auto;
-          object-fit: contain;
-        }
-      }
-
-      .popularGrid {
-        flex-wrap: wrap;
-        padding: 65px 0;
-      }
-      .popularGrid img {
-        // object-fit: cover;
-        // padding-top: 40px;
-        margin-top: 0;
-        width: 90%;
-        //  box-shadow: 2.5rem 2.5rem $orange;
-      }
-
-      .popularGrid div {
-        align-items: center;
-        padding-top: 60px;
-        width: 100%;
+        object-fit: contain;
       }
     }
 
+    .popularGrid {
+      flex-wrap: wrap;
+      padding: 65px 0;
+    }
+    .popularGrid img {
+      // object-fit: cover;
+      // padding-top: 40px;
+      margin-top: 0;
+      width: 90%;
+      //  box-shadow: 2.5rem 2.5rem $orange;
+    }
+
+    .popularGrid div {
+      align-items: center;
+      padding-top: 60px;
+      width: 100%;
+    }
     .sectionFour p {
       text-align: center;
     }
