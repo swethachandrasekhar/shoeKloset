@@ -357,6 +357,9 @@ header {
 }
 
 @media (max-width: 750px) {
+  .blogPostPage h1 {
+    font-size: 7rem;
+  }
   .blogPostPage header {
     background-position: 65%;
   }
@@ -370,6 +373,7 @@ header {
   text-align: center;
   text-transform: uppercase;
   color: #4c0341;
+  line-height: 70px;
 }
 
 .contactPage h2 {
@@ -393,6 +397,13 @@ header {
 }
 
 @media (max-width: 900px) {
+  .contactPage h1 {
+    font-size: 6rem;
+    text-align: left;
+  }
+  .contactPage h1 span {
+    display: block;
+  }
   .contactPage h2 {
     font-size: 2rem;
   }
@@ -425,6 +436,7 @@ header {
   font-style: normal;
   font-size: 5.2rem;
   letter-spacing: 1.2px;
+  line-height: 50px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 400px;
@@ -1669,17 +1681,17 @@ textarea:focus button, .contactPage button {
 }
 
 @media (max-width: 800px) {
-  textarea:hover input,
-  textarea:hover label,
-  textarea:hover textarea,
-  textarea:hover button,
-  textarea:focus input,
-  textarea:focus label,
-  textarea:focus textarea,
-  textarea:focus button, .contactPage input,
-  .contactPage label,
-  .contactPage textarea,
-  .contactPage button {
+  textarea:hover .formSection input,
+  textarea:hover .formSection label,
+  textarea:hover .formSection textarea,
+  textarea:hover .formSection button,
+  textarea:focus .formSection input,
+  textarea:focus .formSection label,
+  textarea:focus .formSection textarea,
+  textarea:focus .formSection button, .contactPage .formSection input,
+  .contactPage .formSection label,
+  .contactPage .formSection textarea,
+  .contactPage .formSection button {
     font-size: 1.7rem;
   }
   textarea:hover .nameAndEmailField,

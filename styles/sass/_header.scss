@@ -66,6 +66,10 @@ header {
   }
 
   @media (max-width: 750px) {
+
+    h1 {
+      font-size: 7rem;
+    }
     header {
       background-position: 65%;
     }
@@ -80,6 +84,7 @@ header {
     text-align: center;
     text-transform: uppercase;
     color: $plum;
+    line-height: 70px;
   }
 
   h2 {
@@ -102,6 +107,14 @@ header {
 
 //   START MEDIA QUERIES 
   @media (max-width: 900px) {
+    h1 {
+      font-size: 6rem;
+      text-align: left;
+      span {
+        display: block;
+      }
+    }
+
     h2 {
       font-size: 2rem;
     }
@@ -133,6 +146,7 @@ header {
   h2 {
     @include fontFamily($heading-font, normal, 5.2rem);
     letter-spacing: 1.2px;
+    line-height: 50px;
     text-align: center;
     text-transform: uppercase;
     font-weight: 400px;

@@ -103,10 +103,10 @@ textarea:focus, .contactPage {
 //MEDIA QUERIES START
 
   @media (max-width: 800px) {
-    input,
-    label,
-    textarea,
-    button {
+    .formSection input,
+    .formSection label,
+    .formSection textarea,
+    .formSection button {
       font-size: 1.7rem;
     }
 
