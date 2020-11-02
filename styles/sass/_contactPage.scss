@@ -1,0 +1,70 @@
+//CONTACT US PAGE STYLES
+
+
+.contactPage {
+  .getInTouchSection {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .getInTouchSectionTwo nav ul {
+    li {
+      display: inline;
+      padding: 5px 20px 5px 0;
+      a {
+        color: $plum;
+        font-size: 20px;
+      }
+    }
+  }
+
+  .getInTouchSectionTwo p {
+    text-align: left;
+  }
+
+  a.email {
+    @include fontFamily($heading-font, normal, 3rem);
+    line-height: 70px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $plum;
+  }
+
+  .getInTouchSectionOne {
+    width: 65%;
+    margin: 0;
+    position: relative;
+    top: -30%;
+    right: 0;
+    transform: translate(10%, -35%);
+    box-shadow: -3rem 3rem $orange;
+  }
+
+  .getInTouchSectionTwo {
+    padding-top: 10%;
+  }
+
+  //START MEDIA QUERIES
+
+  @media (max-width: 700px) {
+    .getInTouchSection {
+      flex-wrap: wrap;
+    }
+    .getInTouchSectionOne {
+      width: 100%;
+      transform: translateY(-5%);
+      box-shadow: -2rem 2rem $orange;
+    }
+    .getInTouchSectionTwo {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0 40px 0;
+      transform: translateY(8%);
+    }
+  }
+}

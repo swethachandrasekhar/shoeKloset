@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <script src="https://kit.fontawesome.com/4f84721cc0.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pompiere&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/regular.css"
+        integrity="sha384-APzfePYec2VC7jyJSpgbPrqGZ365g49SgeW+7abV1GaUnDwW7dQIYFc+EuAuIx0c" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css"
+        integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./styles/style.css" />
+</head>
+
+<body class="contactPage">
+    <!-- SKIP CONTENT LINK FOR ACCESSIBILITY -->
+    <a href="#mainContent" class="skipLink">Skip to main content.</a>
+    <header>
+        <div class="wrapper headerContent">
+            <div class="headerContentOne">
+                <p class="logo">Shoe <span>Kloset</span></p>
+                <div>
+                    <nav>
+                        <!-- Hamburger menu for mobile view -->
+                        <input type="checkbox" id="toggle" name="toggle" />
+                        <label for="toggle"><i class="fa fa-bars"></i></label>
+                        <!-- X icon for slide menu close(couldn't find a lighter X for free on fontawesome.com)-->
+                        <label class="menuClose" for="toggle"><i class="fas fa-times"></i></label>
+                        <!-- Main navigation links  -->
+                        <ul>
+                            <li><a href="./index.html">Home</a></li>
+                            <li><a href="./index.html#mainContent">About</a></li>
+                            <li><a href="./blogPost.html">Blog</a></li>
+                            <li><a href="./contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="headerContentTwo">
+                <!--Heading -->
+                <h1>GET IN TOUCH</h1>
+            </div>
+        </div>
+    </header>
+    <main id="mainContent" class="fullWidthWrapper">
+        <div class="wrapper">
+            <!-- Get in touch Section Start -->
+            <section class="getInTouchSection">
+                <!-- Form div start -->
+                <div class="formSection getInTouchSectionOne">
+                    <form action="submit">
+                        <div class="nameAndEmailField">
+                            <div>
+                                <label for="name" class="srOnly">Name</label>
+                                <input type="text" name="name" placeholder="Name" />
+                            </div>
+                            <div>
+                                <label for="emailAddress" class="srOnly">Email Address</label>
+                                <input type="email" name="emailAddress" id="emailAddress" placeholder="Email Address" />
+                            </div>
+                        </div>
+                        <div class="commentArea">
+                            <label for="comment" class="srOnly">Comment</label>
+
+                            <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Comments"></textarea>
+                        </div>
+
+                        <button>SUBMIT</button>
+                    </form>
+                </div>
+                <!-- Form div ends  -->
+
+                <!-- Social Media Links div start -->
+                <div class="getInTouchSectionTwo">
+                    <div>
+                        <nav>
+                            <ul>
+                                <li>
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="fab fa-whatsapp"></i></a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <a class="email" href="#">INFO@EMAIL.COM</a>
+                    <p>123-456-789</p>
+                    <p>123 Queen Street West, Unit 10</p>
+                    <p>Toronto, Ontario</p>
+                    <p>M5V2D5</p>
+                </div>
+                <!-- Social Media Links div end -->
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p class="copyRights">
+            Copyright © 2020 <a href="https://junocollege.com/">Juno College</a>
+        </p>
+    </footer>
+</body>
+
+</html>

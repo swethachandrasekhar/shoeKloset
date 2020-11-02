@@ -1,0 +1,185 @@
+//FORM STYLING FOR CONTACT AND BLOG PAGE
+
+
+.blogPostPage,
+.contactPage {
+  .formSection {
+    margin: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px 30px 60px;
+  }
+
+  .nameAndEmailField {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    div {
+      width: 48%;
+    }
+  }
+  .commentArea {
+    width: 100%;
+    padding: 20px 0;
+  }
+  .formButton {
+    display: flex;
+    justify-content: center;
+  }
+
+  input {
+    width: 100%;
+    @include fontFamily($body-font, normal, 2rem);
+  }
+
+  textarea {
+    width: 100%;
+    @include fontFamily($body-font, normal, 2rem);
+    padding: 20px;
+    border: 2px solid $orange;
+    background-color: $pale-mauve;
+  }
+
+  button {
+    @include fontFamily($body-font, normal, 2rem);
+    background-color: $plum;
+    color: $white;
+    padding: 10px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    border: none;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    padding: 20px;
+    border: 2px solid $pale-mauve;
+    border-bottom: 2px solid $orange;
+    background-color: $pale-mauve;
+  }
+
+  input[type="text"]::placeholder {
+    position: absolute;
+    top: 0;
+  }
+}
+
+input[type="text"]:focus,
+input[type="text"]:hover,
+input[type="email"]:focus,
+input[type="email"]:hover,
+textarea:hover,
+textarea:focus {
+  border: 2px solid $orange;
+  background-color: $white;
+}
+
+textarea:hover,
+textarea:focus, .contactPage {
+  .formSection {
+    background-color: white;
+  }
+
+  form {
+    margin: 0 30px 30px;
+  }
+
+  input[type="text"],
+  input[type="email"] {
+    background-color: $white;
+  }
+  textarea {
+    background-color: $white;
+  }
+
+  button {
+    background-color: $brown-red;
+  }
+
+//MEDIA QUERIES START
+
+  @media (max-width: 800px) {
+    input,
+    label,
+    textarea,
+    button {
+      font-size: 1.7rem;
+    }
+
+    .nameAndEmailField {
+      padding: 10px 0;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      padding: 5px;
+    }
+    form {
+      margin: 15px;
+    }
+  }
+}
+
+.blogPostPage {
+  .formSection {
+    padding-right: 10%;
+    margin: 0;
+    input,
+    textarea {
+      margin: 5px 0;
+    }
+
+    form {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .formSection {
+      padding: 0;
+    }
+
+    .nameAndEmailField {
+      flex-direction: column;
+      justify-content: center;
+      
+      margin: 0;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.contactPage {
+  .formSection {
+    background-color: white;
+
+    input,
+    textarea {
+      margin: 5px 0;
+    }
+    form {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 950px) {
+    .formSection {
+      padding: 0;
+    }
+
+    .nameAndEmailField {
+      flex-direction: column;
+      justify-content: center;
+      margin: 0;
+      div {
+        width: 100%;
+      }
+    }
+  }
+}

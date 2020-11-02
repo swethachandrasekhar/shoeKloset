@@ -1,0 +1,220 @@
+//MAIN NAV LINK  STYLES
+
+
+
+header nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 15px;
+}
+
+.logo {
+  @include fontFamily($heading-font, normal, 3.6rem);
+  line-height: 36px;
+  padding: 15px 0;
+  margin: 0;
+  color: $plum;
+  letter-spacing: 1.1px;
+  span {
+    display: block;
+  }
+}
+
+.headerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContentOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.headerContentTwo {
+  display: flex;
+  justify-content: flex-start;
+}
+
+header nav {
+  li {
+    list-style: none;
+    text-transform: uppercase;
+    padding: 0 25px;
+    transition: background-color linear 0.2s;
+
+    a {
+      @include fontFamily($nav-font, bold, 2rem);
+      color: $black;
+      text-decoration: none;
+    }
+    a:hover,
+    a:focus {
+      color: $white;
+    }
+  }
+}
+.blogPostPage,
+.contactPage {
+  .headerContentTwo {
+    justify-content: center;
+    align-items: center;
+    min-height: 130px;
+    z-index: 65;
+  }
+}
+
+.contactPage {
+  .headerContentTwo {
+    padding-top: 100px;
+  }
+}
+
+header li:hover,
+header li:focus {
+  background-color: $plum;
+}
+
+.headerContentOne label {
+  display: inline-block;
+}
+
+.headerContentOne input {
+  display: inline;
+  visibility: hidden;
+}
+
+/* STYLING WHEN CHECKBOX/HAMBURGER MENU IS CLICKED FOR MAIN NAV  */
+
+.headerContentOne label {
+  font-size: 3.5rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+  padding: 10px 20px 0px 95px;
+  display: none;
+}
+
+.headerContentOne label i {
+  color: $plum;
+}
+
+.headerContentOne input {
+  position: fixed;
+  right: 10px;
+  top: 0;
+  height: 60px;
+  width: 60px;
+  display: none;
+}
+
+input[type="checkbox"]:checked ~ label i {
+  color: $plum;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked ~ label.menuClose i {
+  color: $pale-mauve;
+  visibility: visible;
+}
+
+input[type="checkbox"]:checked ~ ul {
+  right: 0;
+}
+
+.headerContentOne .menuClose {
+  font-size: 4.2rem;
+  visibility: hidden;
+  padding-right: 27px;
+}
+
+// MEDIA QUERIES START
+
+@media (max-width: 1298px) {
+  header nav ul {
+    background-color: rgba(255, 255, 255, 0.781);
+  }
+}
+
+@media (max-width: 1000px) {
+  .contactPage {
+    .headerContentTwo {
+      padding-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .blogPostPage,
+  .contactPage {
+    .headerContentTwo {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  }
+
+  .headerContentTwo {
+    justify-content: flex-start;
+  }
+
+  header li:hover,
+  header li:focus {
+    background-color: #fae5ff8e;
+    color: $black;
+  }
+
+  header nav li a:hover {
+    color: $black;
+  }
+  header nav li a {
+    margin: 0;
+    padding: 0;
+  }
+
+  .headerContentOne label {
+    display: inline;
+  }
+
+  .headerContentOne nav ul {
+    display: block;
+  }
+  /* move nav out of the screen before hamburger menu is clicked */
+  .headerContentOne ul {
+    z-index: 9;
+    background-color: $plum;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    padding-top: 55px;
+    margin: 0;
+    text-align: center;
+    transition: all 0.3s;
+
+    li {
+      border-bottom: 0.5px solid $pale-mauve;
+
+      a {
+        display: inline-block;
+        font-size: 2.3rem;
+        padding: 15px 0;
+        color: $white;
+      }
+    }
+  }
+}
+
+// PHONE SCREEN SIZE
+@media (max-width: 650px) {
+  .logo {
+    @include fontFamily($heading-font, normal, 3.6rem);
+    line-height: 36px;
+    padding-top: 10px;
+    letter-spacing: 1.1px;
+    span {
+      display: block;
+    }
+  }
+}

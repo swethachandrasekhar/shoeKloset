@@ -1,0 +1,206 @@
+//HEADING AND HEADER STYLING
+
+
+header {
+  height: 100vh;
+  min-height: 700px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* SKIP LINK  */
+.skipLink {
+  position: absolute;
+  left: -3000px;
+  top: 10px;
+  z-index: 999;
+  background-color: #ffffff;
+  color: #1f2022;
+}
+
+.skipLink:focus {
+  left: 0;
+}
+
+.blogPostPage {
+  header {
+    background-image: url("../assets/blog-header.jpg");
+    height: 75vh;
+    min-height: 500px;
+    background-position: 50% 20%;
+  }
+
+  h1 {
+    @include fontFamily($heading-font, normal, 8rem);
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $plum;
+  }
+
+  h2 {
+    @include fontFamily($heading-font, normal, 5.2rem);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: $plum;
+    padding-bottom: 15px;
+    font-weight: 400;
+    line-height: 60px;
+  }
+
+  h3 {
+    @include fontFamily($heading-font, normal, 4.2rem);
+    line-height: 70px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+    color: $plum;
+  }
+
+  @media (max-width: 1230px) {
+    h2 {
+      font-size: 4.5rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (max-width: 750px) {
+    header {
+      background-position: 65%;
+    }
+  }
+}
+
+//  CONTACT PAGE HEADER STYLING 
+.contactPage {
+  h1 {
+    @include fontFamily($heading-font, normal, 8rem);
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $plum;
+  }
+
+  h2 {
+    @include fontFamily($heading-font, normal, 3rem);
+    line-height: 70px;
+    letter-spacing: 1.3px;
+    text-transform: uppercase;
+  }
+
+  header {
+    background-image: url("../assets/contact-image.jpg");
+    height: 75vh;
+    min-height: 500px;
+    background-size: cover;
+  }
+
+  main {
+    background-color: $pale-mauve;
+  }
+
+//   START MEDIA QUERIES 
+  @media (max-width: 900px) {
+    h2 {
+      font-size: 2rem;
+    }
+    header {
+      height: 70vh;
+      background-size: cover;
+    }
+  }
+}
+
+// INDEX PAGE HEADER STYLING 
+
+.indexPage {
+  header {
+    background-image: url("../assets/header-image.jpg");
+    height: 65vh;
+    background-position: center;
+  }
+
+  h1 {
+    @include fontFamily($heading-font, normal, 11rem);
+    line-height: 64px;
+    color: $plum;
+    span {
+      display: block;
+    }
+  }
+
+  h2 {
+    @include fontFamily($heading-font, normal, 5.2rem);
+    letter-spacing: 1.2px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400px;
+    color: $plum;
+  }
+
+  h3 {
+    @include fontFamily($heading-font, normal, 5.2rem);
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 15px;
+    color: $plum;
+  }
+
+  h5 {
+    @include fontFamily($heading-font, normal, 5.2rem);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    @include fontFamily($heading-font, normal, 4.2rem);
+    letter-spacing: 1.3px;
+    line-height: normal;
+    color: $plum;
+    text-transform: uppercase;
+  }
+
+  //   START MEDIA QUERIES 
+  @media (max-width: 1100px) {
+    header {
+      background-position: 65%;
+      height: 70vh;
+    }
+    h1 {
+      font-size: 7rem;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    h3,
+    h4 {
+      font-size: 3rem;
+      padding: 10px;
+    }
+  }
+
+  @media (max-width: 850px) {
+    h1 {
+      font-size: 7rem;
+      text-shadow: 2px 2px $pale-mauve;
+    }
+
+    h2 {
+      font-size: 4rem;
+    }
+
+    header {
+      background-size: cover;
+      height: 55vh;
+      min-height: 450px;
+      background-position: 38%;
+    }
+
+    .logo {
+      font-size: 3rem;
+    }
+  }
+}

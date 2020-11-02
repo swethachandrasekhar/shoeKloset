@@ -1,0 +1,189 @@
+//BLOG PAGE STYLING
+
+
+.blogBackground {
+  background-color: $pale-mauve;
+}
+
+.blogFlex {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.blogSection {
+  max-width: 60%;
+  margin-left: 50px;
+  justify-content: flex-end;
+  transform: translateY(-200px);
+}
+
+.moreBlogLinks {
+  max-width: 600px;
+  margin: 100px 30px 0 8%;
+}
+
+aside {
+  background-color: $white;
+  padding: 0 50px 30px 30px;
+  padding-top: 100%;
+  position: relative;
+
+  img {
+    width: 125%;
+    position: absolute;
+    top: -2%;
+    right: 20px;
+  }
+}
+
+.anyWeather h3 {
+  margin-top: 30px;
+}
+
+.anyWeather,
+.recentPosts {
+  margin-bottom: 40px;
+}
+
+.moreBlogLinksBoxTwo {
+  background-color: $white;
+}
+
+.blogFlex li {
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 2rem;
+  a {
+    color: $black;
+    @include fontFamily($body-font, normal, 2rem);
+    line-height: 25px;
+    text-align: center;
+    text-decoration: none;
+  }
+}
+
+.blogSectionArticle {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+
+  .blogImage {
+    position: relative;
+    width: calc(100% - 40px);
+    left: 40px;
+    top: -77px;
+
+    img {
+      box-shadow: -40px 40px 0px 0px #fe6f19;
+    }
+  }
+
+  .blogSectionText {
+    position: relative;
+
+    padding: 20px 10% 15px 50px;
+
+    p {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+.commentsSection {
+  margin: 50px 0 10px 0px;
+  padding-right: 10%;
+}
+
+.commentsSectionOne,
+.commentsSectionTwo {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.commentsSectionOne,
+.commentsSectionTwo {
+  div {
+    width: 75%;
+  }
+
+  .dateAndAuthor {
+    margin-bottom: 10px;
+    padding: 0;
+  }
+}
+
+.commentsSectionOne {
+  margin: 40px 0;
+}
+
+.commentsSectionTwo {
+  margin: 60px 0;
+}
+
+.commentsSectionOne img,
+.commentsSectionTwo img {
+  width: 10%;
+  object-fit: contain;
+}
+
+.commentsSectionOne .comments,
+.commentsSectionTwo .comments {
+  text-align: left;
+}
+
+.dateAndAuthor {
+  padding-bottom: 30px;
+  font-weight: bold;
+}
+
+
+// START MEDIA QUERIES 
+
+
+@media (max-width: 950px) {
+  .commentsSection {
+    padding: 0;
+    img {
+      width: 15%;
+    }
+  }
+
+  .blogFlex {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .blogSection {
+    width: 90%;
+    max-width: 100%;
+    margin: 0 20px;
+  }
+
+  .moreBlogLinks {
+    width: 80%;
+    margin: 20px 20px;
+  }
+  .asideSection {
+    padding: 20px 20px;
+    transform: translateY(-150px);
+    img {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .blogSectionArticle .blogImage {
+    width: calc(100% - 20px);
+    left: 20px;
+    top: -20px;
+    img {
+      box-shadow: -20px 20px 0 0 $orange;
+    }
+  }
+
+  .blogSectionArticle .blogSectionText {
+    padding: 30px 50px 15px 50px;
+  }
+}

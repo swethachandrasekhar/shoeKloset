@@ -1,0 +1,27 @@
+//FOOTER STYLING
+
+
+footer {
+  background-color: $brown-red;
+
+}
+
+p.copyRights {
+  text-align: center;
+  @include fontFamily($footer-font, normal, 2rem);
+  color: $white;
+  margin: 0;
+  padding: 10px 0;
+
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $white;
+  }
+}
+
+
+footer a:hover,
+footer a:focus {
+  color: yellow;
+}
