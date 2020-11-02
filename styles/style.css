@@ -591,7 +591,6 @@ header nav li a:focus {
       -ms-flex-align: center;
           align-items: center;
   min-height: 130px;
-  z-index: 65;
 }
 
 .contactPage .headerContentTwo {
